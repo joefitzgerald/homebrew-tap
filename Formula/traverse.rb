@@ -5,21 +5,21 @@
 class Traverse < Formula
   desc "Build and maintain groups on the basis of reporting hierarchy."
   homepage "https://github.com/joefitzgerald/traverse"
-  version "0.0.15"
+  version "0.0.16"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.15/traverse_v0.0.15_darwin_x86_64.tar.gz"
-      sha256 "fd79e33c5f7fc05a65ab918c78fae89e1b9fa1ef3d8333214c9c7200d5aa09d1"
+    if Hardware::CPU.arm?
+      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.16/traverse_v0.0.16_darwin_arm64.tar.gz"
+      sha256 "669dee582d2963e9d977cecb7da38d9d3b6038c471221be2613491b2e24557b9"
 
       def install
         bin.install "traverse"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.15/traverse_v0.0.15_darwin_arm64.tar.gz"
-      sha256 "60493847d9ff64402369b826769525dcfa2cc3b6da7c0dcdb123b6ee394b9dd8"
+    if Hardware::CPU.intel?
+      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.16/traverse_v0.0.16_darwin_x86_64.tar.gz"
+      sha256 "42bfcc94b7a9663d8f0cea3403262006ce1ac78339e58fa3d4b02700f4ed4250"
 
       def install
         bin.install "traverse"
@@ -28,17 +28,17 @@ class Traverse < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.15/traverse_v0.0.15_linux_arm64.tar.gz"
-      sha256 "aa4b32a71ed90feda15e3c3e09099f2c378509520ad44c0277b25915591796c8"
+    if Hardware::CPU.intel?
+      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.16/traverse_v0.0.16_linux_x86_64.tar.gz"
+      sha256 "7259833f20a25d4a2a8c67cfd7f5a97b9d6a47baef341ba0f2ad8dcbad94ef7b"
 
       def install
         bin.install "traverse"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.15/traverse_v0.0.15_linux_x86_64.tar.gz"
-      sha256 "456d3e058b88d7ab195d1eb88daf2aac0624523bc5d44e2524d4c4681eaf8964"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joefitzgerald/traverse/releases/download/v0.0.16/traverse_v0.0.16_linux_arm64.tar.gz"
+      sha256 "46b522b8be157ab07128bb5d8a9e7a8aa3b4a01881334acd2f95a5993f59df9e"
 
       def install
         bin.install "traverse"
