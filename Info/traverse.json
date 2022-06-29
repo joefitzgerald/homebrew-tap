@@ -9,13 +9,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/joefitzgerald/traverse",
   "versions": {
-    "stable": "0.0.15",
+    "stable": "0.0.16",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/joefitzgerald/traverse/releases/download/v0.0.15/traverse_v0.0.15_darwin_x86_64.tar.gz",
+      "url": "https://github.com/joefitzgerald/traverse/releases/download/v0.0.16/traverse_v0.0.16_darwin_x86_64.tar.gz",
       "tag": null,
       "revision": null
     }
