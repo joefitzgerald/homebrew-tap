@@ -5,21 +5,21 @@
 class Gabby < Formula
   desc "Gabby is a helpful assistant for your organization's directory and calendar systems, that currently supports Office 365."
   homepage "https://github.com/joefitzgerald/gabby"
-  version "0.6.1"
+  version "0.6.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.1/gabby_v0.6.1_Darwin_x86_64.tar.gz"
-      sha256 "3be535c040ed26589d4511f5e18644cd453c86a54efd0f1eae7dd959f85d8100"
+      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.2/gabby_v0.6.2_Darwin_x86_64.tar.gz"
+      sha256 "031752072113a59bd02580c7177afb4a62fc3a7d5748a0c88d7c74b9856ab2e3"
 
       def install
         bin.install "gabby"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.1/gabby_v0.6.1_Darwin_arm64.tar.gz"
-      sha256 "3ac979daf4129190b099d5e6a4c8ea3138f276c5f123bae423ec1a5c2feb7de4"
+      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.2/gabby_v0.6.2_Darwin_arm64.tar.gz"
+      sha256 "684ffc8f744f5f1a1f778acec35c071a40812458f7f6d2421b0a49497e21efd8"
 
       def install
         bin.install "gabby"
@@ -28,17 +28,17 @@ class Gabby < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.1/gabby_v0.6.1_Linux_x86_64.tar.gz"
-      sha256 "04402569fce53530211b0e9164251ed77593503dec94baa7b88443227a94542c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.2/gabby_v0.6.2_Linux_arm64.tar.gz"
+      sha256 "fe9524caf2dd80a6f51a7cacce0dbf5dab3f3cb882938c2e3b49ec50f7467d49"
 
       def install
         bin.install "gabby"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.1/gabby_v0.6.1_Linux_arm64.tar.gz"
-      sha256 "4cd2f15f9cc3b2f7691fb9eebcc3488accf8dd9d5121c5ac965da0bcf5c477d6"
+    if Hardware::CPU.intel?
+      url "https://github.com/joefitzgerald/gabby/releases/download/v0.6.2/gabby_v0.6.2_Linux_x86_64.tar.gz"
+      sha256 "941dc5ef4e539df32513ee1f6d980bc9dab3046ec8912953f83dc6e40d7f5e55"
 
       def install
         bin.install "gabby"
