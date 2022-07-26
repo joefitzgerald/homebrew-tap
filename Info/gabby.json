@@ -9,13 +9,13 @@
   "license": "Apache-2.0",
   "homepage": "https://github.com/joefitzgerald/gabby",
   "versions": {
-    "stable": "0.6.1",
+    "stable": "0.6.2",
     "head": null,
     "bottle": false
   },
   "urls": {
     "stable": {
-      "url": "https://github.com/joefitzgerald/gabby/releases/download/v0.6.1/gabby_v0.6.1_Darwin_x86_64.tar.gz",
+      "url": "https://github.com/joefitzgerald/gabby/releases/download/v0.6.2/gabby_v0.6.2_Darwin_x86_64.tar.gz",
       "tag": null,
       "revision": null
     }
